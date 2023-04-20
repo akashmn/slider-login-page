@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap')
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    width: 100wh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.28);
+        /*background-color: #a8dadc;*/
+
+        min-width: 960px;
+        max-width: 1000px;
+        min-height: 560px;
+        border-radius: 9px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+}
+
+.container .form{
+    position: absolute;
+    top:0;
+    text-align: center;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+   /* background-color:#a8dadc ;*/
+    overflow: hidden;
+}
+
+.container .form.sign-in-form{
+    left:0;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.container .form.sign-up-form{
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;   
+}
+
+.container .form .wrapper{
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: .7s ease-in-out transform;
+}
+
+.container .form.sign-in-form .wrapper{
+    transform: translate(100%);
+    
+}
+
+.container .form.sign-in-form.active .wrapper{
+    transform: translate(0);
+    
+}
+
+.container .form.sign-up-form .wrapper{
+    transform: translate(-100%);
+   
+}
+
+.container .form.sign-up-form.active .wrapper{
+    transform: translate(0);
+}
+
+.container .form h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #000;
+}
+.social-media{
+    font-size: 24px;
+    margin-top: 28px;
+    margin-bottom: 20px;  
+}
+.social-icon {
+    text-decoration: none;
+    background-image: rgba(0, 0, 0);
+    border: 1px solid rgba(0, 0, 0, 0.262);
+    text-align: center;
+    border-radius: 33px;
+    padding: 8px;
+    margin: 0 7px; 
+    transform: scale(0);
+}
+.social-icon:hover{
+    
+    background-image: linear-gradient(rgba(22, 89, 198, 0.82), rgba(158, 10, 232, 0.715));
+    color: white;
+    transform: scale(0.5);
+}
+
+.container span{
+    font-size: 18px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: lighter;
+    color: rgba(0, 0, 0, 0.645);
+    line-height: 37px;
+}
+
+.container .form input{
+    display: block;
+    width: 350px;
+    height: 40px;
+    margin: 16px 0;
+    padding-left: 15px;
+    font-size: 16px;
+    border: none;
+    background-color: rgba(64, 68, 104, 0.179);
+    border-radius: 5px;
+}
+.container .form input:focus{
+    outline: none;
+}
+.frgt{
+    font-size: 18px;
+    text-decoration: none;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgba(0, 0, 0, 0.645);
+}
+.container .form .btn{
+    margin: 19px 0;
+}
+.container .form .btn button{
+    padding: 15px 60px;
+    border-radius: 23px;
+    border: none;
+    background-image: linear-gradient(rgba(22, 89, 198, 0.82), rgba(158, 10, 232, 0.715));
+    color: white;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    box-shadow: 3px 3px 10px 2px rgba(0, 0, 0, 0.41);
+    cursor: pointer;
+}
+.container .form .btn button:hover{
+    padding: 16px 70px;
+    border-radius: 27px;
+}
+
+.overlay-container{
+    position: absolute;
+    background-image: url("bgimage.jpg");
+    top:0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: .7s ease-in-out transform;
+}
+
+.overlay{
+    position: absolute;
+    left: 0;
+    width: 200%;
+    background-image: url("bgimage.jpg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transition: .7s ease-in-out transform;
+}
+
+.overlay-left,.overlay-right{
+    width: 50%;
+    text-align: center;
+}
+
+.overlay-container h1{
+    font-size: 50px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #ffffff;
+    
+}
+
+.overlay-container p{
+    color: #ffffff;
+    font-size: 19px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 300px;
+    margin: 29px 20px;
+    line-height: 25px;
+}
+
+.overlay-container button{
+    padding: 15px 60px;
+    background-color: #000;
+    border: none;
+    border-radius: 40px;
+    font-size: 16px;
+    color:#ffffff ;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor: pointer;
+}
+
+.overlay-container button:hover{
+    background-color:#ffffff;
+    color: rgba(0, 0, 0, 0.796);
+    box-shadow: 3px 3px 10px 2px rgba(0, 0, 0, 0.41);
+}
